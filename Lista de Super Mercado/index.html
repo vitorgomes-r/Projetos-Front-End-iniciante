@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Super Mercado</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: rgba(61, 61, 61, 0.589);
+            padding: 1.5em;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 1.2em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            box-shadow: 0px 1px 20px 4px rgba(0, 0, 0, 0.144);
+        }
+
+        .lista-cadastro{
+            display: flex;
+            margin: 1.5em;
+            padding: 0 1em;
+            flex-direction: column;
+        }
+
+        .lista-cadastro input[type="text"]{
+            flex: 1;
+            height: 2.5em;
+            padding-left: 1em;
+            align-items: center;
+            border: solid black 0.1em;
+        }
+
+        .lista-cadastro input[name="cadastro"]{
+            background-color: rgb(121, 121, 121);
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            padding: 0.3em;
+            font-style: italic;
+
+        }
+
+        .lista-cadastro input[name="cadastro"]:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 468px) {
+
+            .lista-cadastro{
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+            .lista-cadastro input [type="text"] {
+            margin-right: 1em;
+            margin-bottom: 0;
+            }
+        }
+
+        .produtos{
+            padding: 1.5em;
+            flex: 1;
+            border-bottom: solid rgba(0, 0, 0, 0.26) 0.1em;
+        }
+
+        .produtos-single{
+            display: flex;
+            justify-content: left;
+            margin-left: 13em;
+            
+        }
+
+        #item{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.5em;
+            display: flex;
+            margin-right: 1.5em;
+            color: rgb(77, 76, 76);
+        }
+
+        #preco{
+            background-color: rgb(255, 238, 0);
+            padding: 0.3em;
+            font-size: large;
+            color: rgba(0, 0, 0, 0.918);
+            border-radius: 1em;
+            border: solid rgb(0, 0, 0) 0.1em;
+        }
+
+        #preco-final{
+            font-size: 2em;
+            color: black;
+            margin-top: 3em;
+            border-radius: 0.5em;
+            display: flex;
+        }
+
+        :hover#precoF{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Lista De Compras</h2>
+    </header>
+    <div class="lista-cadastro">
+        <input type="text" name="nome-produto" id="inome-produto" placeholder="Produto">
+        <input type="text" name="valor-produto" id="ivalor-produto" placeholder="Preço do produto">
+        <input type="submit" name="cadastro" id="icadastro" value="Cadastrar">
+    </div>
+    <hr>
+    <div class="produtos">
+        <div class="produtos-single">
+            <p id="item">Biscoitos:</p>
+            <span id="preco">3,00R$</span>
+        </div>
+    </div>
+    <span id="preco-final">
+        Preço total: |<span id="precoF">3.00R$|</span>
+    </span>
+    <hr>
+    <script>
+        var items = [];
+
+        document.querySelector('input[type=submit]')
+        .addEventListener('click',()=>{
+           var nomeproduto = document.querySelector('input[name=nome-produto]').value; 
+           var precoProduto = document.querySelector('input[name=valor-produto]').value;
+
+
+           items.push({
+            nome: nomeproduto,
+            valor: precoProduto
+           });
+
+        });
+    </script>
+</body>
+</html>
