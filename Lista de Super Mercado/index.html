@@ -13,7 +13,7 @@
         }
 
         header{
-            background-color: rgba(61, 61, 61, 0.589);
+            background-color: rgb(81, 90, 218);
             padding: 1.5em;
             text-align: center;
             color: rgb(255, 255, 255);
@@ -39,7 +39,7 @@
         }
 
         .lista-cadastro input[name="cadastro"]{
-            background-color: rgb(121, 121, 121);
+            background-color: rgb(84, 221, 255);
             color: rgb(255, 255, 255);
             font-family: Arial, Helvetica, sans-serif;
             font-size: 0.9em;
@@ -69,22 +69,24 @@
         .produtos{
             padding: 1.5em;
             flex: 1;
-            border-bottom: solid rgba(0, 0, 0, 0.26) 0.1em;
         }
 
         .produtos-single{
             display: flex;
-            justify-content: left;
-            margin-left: 13em;
-            
+            justify-content: center;
+            text-align: center; 
+            border-bottom: solid rgba(0, 0, 0, 0.26) 0.1em;
+            padding: 2em;
         }
 
         #item{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 1.5em;
+            font-size: 2em;
             display: flex;
-            margin-right: 1.5em;
+            margin-right: 2em;
             color: rgb(77, 76, 76);
+            justify-content: center;
+            text-align: center;
         }
 
         #preco{
@@ -94,11 +96,13 @@
             color: rgba(0, 0, 0, 0.918);
             border-radius: 1em;
             border: solid rgb(0, 0, 0) 0.1em;
+            justify-content: center;
+            text-align: center;
         }
 
         #preco-final{
             font-size: 2em;
-            color: black;
+            color: rgb(47, 66, 117);
             margin-top: 3em;
             border-radius: 0.5em;
             display: flex;
@@ -114,19 +118,16 @@
         <h2>Lista De Compras</h2>
     </header>
     <div class="lista-cadastro">
-        <input type="text" name="nome-produto" id="inome-produto" placeholder="Produto">
-        <input type="text" name="valor-produto" id="ivalor-produto" placeholder="Preço do produto">
+        <input type="text" name="nomeproduto" id="inome-produto" placeholder="Produto">
+        <input type="number" name="precoproduto" id="ipreco-produto" placeholder="Preço do produto" step="0.01" >
         <input type="submit" name="cadastro" id="icadastro" value="Cadastrar">
     </div>
     <hr>
     <div class="produtos">
-        <div class="produtos-single">
-            <p id="item">Biscoitos:</p>
-            <span id="preco">3,00R$</span>
-        </div>
+        
     </div>
     <span id="preco-final">
-        Preço total: |<span id="precoF">3.00R$|</span>
+        Preço total: <span id="precoF"> R$ 0,00</span>
     </span>
     <hr>
     <script>
@@ -134,14 +135,37 @@
 
         document.querySelector('input[type=submit]')
         .addEventListener('click',()=>{
-           var nomeproduto = document.querySelector('input[name=nome-produto]').value; 
-           var precoProduto = document.querySelector('input[name=valor-produto]').value;
-
-
+           var nomeproduto = document.querySelector('input[name=nomeproduto]'); 
+           var precoProduto = document.querySelector('input[name=precoproduto]');
            items.push({
-            nome: nomeproduto,
-            valor: precoProduto
+            nome: nomeproduto.value,
+            valor: precoProduto.value,
            });
+    
+        /* <div class="produtos-single">
+            <p id="item">Biscoitos:</p>
+            <span id="preco">3,00R$</span>
+           </div> 
+        */
+           
+            let listaProdutos = document.querySelector('.produtos')
+            listaProdutos.innerHTML="";
+            let soma = 0;
+            items.map(function(val){
+            soma+=parseFloat(val.valor);    
+            listaProdutos.innerHTML+=`      
+           <div class="produtos-single">
+            <p id="item">${val.nome}</p>
+            <span id="preco">R$ ${val.valor}</span>
+           </div>           
+            `;
+           })
+           soma = soma.toFixed(2)
+           nomeproduto.value = "";
+           precoProduto.value = "";
+
+           let elementoSoma = document.querySelector('#precoF')
+           elementoSoma.innerHTML = " R$"+soma;
 
         });
     </script>
