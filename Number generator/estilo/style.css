@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,300;0,400;1,100;1,200&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ysabeau Office' sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #121214;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal{
+    background-color: #343439;
+    padding: 35pt 0pt;
+    min-width: 470px;
+    color: #efefef;
+    font-weight: bolder;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal h2{
+    font-size: 35pt;
+    font-weight: 70;
+    margin-bottom: 20px;
+}
+
+.inputG{
+    display: flex;
+    padding: 20px;
+    gap: 45px;
+}
+
+.inputG label{
+    font-weight: 300;
+    font-size: large;
+    margin-bottom: 15px;
+}
+
+.inputsF{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsF input{
+    border: none;
+    border-bottom: 2pt solid rgb(97, 39, 172);
+    background-color: #343439;
+    width: 13em;
+    font-size: 13pt;
+    color: #efefef;
+}
+
+.inputsF input:focus-visible{
+    outline: none;
+    border-bottom: 2pt solid rgb(175, 142, 218);
+    transition: 1s;
+}
+
+#generate{
+    width: 20em;
+    padding: 5pt;
+    font-size: 15pt;
+    font-weight: bolder;
+    color: #efefef;
+    border: none;
+    background-color: rgb(97, 39, 172);
+    cursor: pointer;
+}
+
+#generate:hover{
+    background-color: rgb(175, 142, 218);
+    color: rgb(45, 7, 94) ;
+    transition: 0.5s;
+}
+
+#result{
+    margin-top: 0.1em;
+    font-size: 5em;
+}
+
+
+
