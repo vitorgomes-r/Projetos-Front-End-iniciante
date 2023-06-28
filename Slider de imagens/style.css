@@ -1,0 +1,145 @@
+body{
+    background-color: black;
+}
+/* Estilização Conteúdo principal */
+
+#minhasImagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 80%;
+    border-radius: 1em;
+    border: 2px solid rgb(255, 255, 255);
+}
+/* Estilização da logo do jogo */
+
+#logo img{
+    margin-top: 30pt;
+    margin-left: 30pt;
+    height: 60pt;
+    width: 25em;
+}
+
+/* Estilização dos botões radio */
+
+.imgs{
+    justify-content: center;
+    margin-top: 25em;
+    margin-left: 3.3em;
+}
+
+
+/* Imagens dos slides */
+
+.minhasImagens1{
+    background-image: url(imagens/img1.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+.minhasImagens2{
+    background-image: url(imagens/img2.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+.minhasImagens3{
+    background-image: url(imagens/img3.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+.minhasImagens4{
+    background-image: url(imagens/img4.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+.minhasImagens5{
+    background-image: url(imagens/img6.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+
+/* Telas intermediárias */
+
+@media screen and (max-width: 1050px) {
+    #minhasImagens {
+        height: 30em;
+        width: 50em;
+        margin: 0 auto;
+    }
+
+    /* Telas menores */
+
+}
+@media screen and (max-width: 815px) {
+    #minhasImagens {
+        height: 25em;
+        width: 40em;
+        margin: 0 auto;
+    }
+}
+
+/* Telas pequenas */
+
+@media screen and (max-width: 660px) {
+    #minhasImagens {
+        height: 20em;
+        width: 30em;
+        margin: 0 auto;
+    }
+    .imgs {
+        margin-top: 20em;
+        margin-left: 2em;
+    }
+}
+
+/* Para celulares etc... */
+
+@media screen and (max-width: 499px) {
+    #minhasImagens {
+        height: 30%;
+        width: 90%;
+    }
+
+    #logo img {
+        margin-top: 15pt;
+        margin-left: 1pt;
+        height: 25%;
+        width: 65%;
+    }
+
+    .imgs {
+        margin-top: 25em;
+        margin-left: 1em;
+    }
+    .minhasImagens1, .minhasImagens2, .minhasImagens3, .minhasImagens4, .minhasImagens5{
+        background-position: center top;
+    }
+
+    /* Telas muito pequenas */
+
+}
+@media screen and (max-width: 273px) {
+    #minhasImagens {
+        height: 10em;
+        width: 13em;
+    }
+
+    #logo img {
+        margin-top: 15pt;
+        margin-left: 1pt;
+    }
+
+    .imgs {
+        margin-top: 15em;
+        margin-left: 1.5em;
+    }
+    .minhasImagens1, .minhasImagens2, .minhasImagens3, .minhasImagens4, .minhasImagens5{
+        background-position: center top;
+    }
+
+}
