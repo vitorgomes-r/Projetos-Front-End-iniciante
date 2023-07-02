@@ -13,13 +13,12 @@ body{
 
 main{
     background-color: rgb(43, 40, 40);
-    min-width: 400px;
+    width: 100vw;
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
 }
 
@@ -28,19 +27,20 @@ main{
     color: white;
     font-family:  Arial, Helvetica, sans-serif;
     margin: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .counts{
     font-size: 50pt;
     width: 70px;
     border: none;
-    background-color: rgb(96, 94, 97);
+    background-color: rgb(27, 27, 27);
     border-radius: 10px;
     color: white;
     transition: 0.2s;
     cursor: pointer;
+    margin: 10px;
 }
 
 .counts:hover{
@@ -69,4 +69,27 @@ main{
 
 #reset:active{
     background-color:rgba(75, 38, 136, 0.555);
+}
+
+@media screen and (max-width: 440px) {
+
+    #number{
+        font-size: 40pt;
+        margin: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .counts{
+        font-size: 30pt;
+        width: 70px;
+        margin: 10px;
+    }
+    
+    #reset{
+        font-size: 10pt;
+        padding: 10px;
+        min-width: 150px;
+        margin-top: 15px;
+    }
 }
