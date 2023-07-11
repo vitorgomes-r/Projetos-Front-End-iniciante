@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="center">
+        <div class="logo"><img src="assets/logo.png" alt="StarBucks logo">
+        </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">What's New</a>
+                <a href="#">Contact us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="extra">
+            <img src="assets/img1.png" alt="StarBucks Coffe" id="IMG">
+        </section>
+        <div class="midia">
+            <a href="https://www.facebook.com/Starbucks/?" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/starbucks/" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com/starbucks" target="_blank"><img src="assets/instagram.png" alt="instagram"></a>
+        </div>
+        <div class="text">
+            <h1>It's not just Coffee It's <span>StarBucks</span></h1>
+            <p>Our aim is that all of our coffee is grown to the highest quality standards using ethical sourcing practices. Our coffee buyers personally travel to coffee farms in Latin America, Africa and Asia to select high quality beans.
+            </p>
+            <button class="more">Learn More</button>
+        </div>
+    </main>
+    <footer>
+        <div class="coffees">
+            <img src="assets/thumb1.png" alt="StarBucks Coffee 1" onmouseenter="STC1()">
+            <img src="assets/thumb2.png" alt="StarBucks Coffee 2" onmouseenter="STC2()">
+            <img src="assets/thumb3.png" alt="StarBucks Coffee 3" onmouseenter="STC3()">
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    const IMG = document.getElementById('IMG')
+    const STC1 = ()=>{
+        IMG.setAttribute('src',"assets/img1.png" )
+    }
+    const STC2 = ()=>{
+        IMG.setAttribute('src',"assets/img2.png" )
+    }
+    const STC3 = ()=>{
+        IMG.setAttribute('src',"assets/img3.png" )
+        IMG.style = 'transition: 0.3s'
+    }
+</script>
