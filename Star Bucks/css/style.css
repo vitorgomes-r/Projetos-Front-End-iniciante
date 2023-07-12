@@ -140,9 +140,23 @@ nav a:hover{
     height: 130px;
 }
 
-@media screen and (max-width: 970px) and (max-height: 750px) {
+@media screen and (max-height: 750px) {
     
     .text {
       top: 220px;
     }
   }
+
+@media screen and (max-height: 660px){
+    .extra{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        bottom: -450px;
+        right: -500px;
+        width: 950px;
+        height: 1030px;
+        border-radius: 40em 0 0 0;
+        background-color: #017143;
+    }
+}
