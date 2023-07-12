@@ -54,6 +54,9 @@ nav a:hover{
     right: -500px;
     width: 1000px;
     height: 1100px;
+
+
+    
     border-radius: 40em 0 0 0;
     background-color: #017143;
 }
@@ -140,23 +143,68 @@ nav a:hover{
     height: 130px;
 }
 
-@media screen and (max-height: 750px) {
+@media screen and (max-height: 750px) /* Para telas grandes */ {
     
     .text {
       top: 220px;
     }
   }
 
-@media screen and (max-height: 660px){
+@media screen and (max-height: 670px) /* Para telas grandes */{
     .extra{
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        bottom: -450px;
         right: -500px;
         width: 950px;
-        height: 1030px;
-        border-radius: 40em 0 0 0;
-        background-color: #017143;
+        height: 970px;
     }
 }
+
+@media screen and (max-height: 600px) /* O minímo possível para telas grandes */{
+
+    .text {
+        top: 150px;
+      }
+
+    .extra{
+        width: 950px;
+        height: 950px;
+    }
+}
+
+@media screen and (max-width: 980px) /*Telas intermediárias*/{
+
+    .text {
+        top: 150px;
+      }
+
+    .extra{
+        width: 900px;
+    }
+
+    .coffees{
+        position: absolute;
+        right: 430px;
+    }
+}
+
+@media screen and (max-width: 900px) /*Telas intermediárias*/{
+
+    .coffees{
+        position: absolute;
+        top: 560px;
+        right: 370px;
+    }
+}
+
+@media screen and (max-width: 900px) /*Telas itermediárias*/{
+
+    .text{
+        top: 200px;
+        font-size: 15px;
+    }
+
+
+    .coffees{
+        display: none;
+    }
+}
+
