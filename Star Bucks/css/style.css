@@ -141,7 +141,8 @@ nav a:hover{
 }
 
 @media screen and (max-width: 970px) and (max-height: 750px) {
-    .text{
-        top: 220px;
+    
+    .text {
+      top: 220px;
     }
-}
+  }
