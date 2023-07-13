@@ -7,7 +7,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 body{
     height: 100%;
-    overflow-y: hidden;
+
 }
 
 .center{
@@ -102,7 +102,7 @@ nav a:hover{
 }
 
 .text{
-    width: 35%;
+    width: 400px;
     margin: 0 auto;
     position: fixed;
     top: 320px;
@@ -208,3 +208,37 @@ nav a:hover{
     }
 }
 
+@media screen and (max-width: 790px) /*Telas itermediárias*/{
+
+
+
+    .text{
+        left: 10px;
+    }
+}
+
+@media screen  and (max-width:730px) /* Telas pequenas */ {
+    #IMG{
+        display: none;
+    }
+
+    .extra{
+        display: none;
+    }
+}
+
+@media screen  and (max-width:600px) /* Telas pequenas */ {
+
+    .body{
+        overflow: visible;
+    }
+
+    .text{
+        width: 50%;
+        top: 100px;
+    }
+
+    .center{
+        display: none;
+    }
+}
