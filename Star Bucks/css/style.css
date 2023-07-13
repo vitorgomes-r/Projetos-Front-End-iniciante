@@ -20,13 +20,13 @@ padding: 0 2%;
 }
 
 .logo{
-    position: fixed;
-    top: 30px;
-    left: 70px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 nav{
-    position: fixed;
+    position: absolute;
     right: 5%;
 }
 
@@ -48,31 +48,30 @@ nav a:hover{
 
 .extra{
     position: fixed;
-    bottom: 0;
-    right: 0;
-    bottom: -450px;
+    bottom: -520px;
     right: -500px;
     width: 1000px;
-    height: 1100px;
-
-
-    
+    height: 900px;
     border-radius: 40em 0 0 0;
     background-color: #017143;
 }
 
 #IMG{
-    transition: 1s;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    height: 350px;
 }
 
 .midia{
-    position: absolute;
+    position:absolute;
     right: 15px;
-    top: 370px;
+    top: 15px;
     transition: 0.3s;
 }
 
 .midia img{
+    position: relative;
     display: block;
     height: 45px;
     padding-bottom: 20px ;
@@ -104,7 +103,7 @@ nav a:hover{
 .text{
     width: 400px;
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     top: 320px;
     left: 70px;
 }
@@ -114,6 +113,7 @@ nav a:hover{
     width: 8em;
     height: 2.6em;
     margin-top: 15px;
+    margin-bottom: 5px;
     border-radius: 10px;
     border: 0;
     background-color: #017143;
@@ -129,7 +129,7 @@ nav a:hover{
 .coffees{
     position: absolute;
     bottom: 0;
-    right: 550px;
+    right: 450px;
 }
 
 .coffees img{
@@ -143,6 +143,12 @@ nav a:hover{
     height: 130px;
 }
 
+@media screen and (max-height:515px) /* Remover coffees */ {
+    .coffees img{
+        display: none;
+    }
+}
+
 @media screen and (max-height: 750px) /* Para telas grandes */ {
     
     .text {
@@ -153,7 +159,7 @@ nav a:hover{
 @media screen and (max-height: 670px) /* Para telas grandes */{
     .extra{
         right: -500px;
-        width: 950px;
+        width: 850px;
         height: 970px;
     }
 }
@@ -165,8 +171,12 @@ nav a:hover{
       }
 
     .extra{
-        width: 950px;
-        height: 950px;
+        width: 840px;
+        height: 910px;
+    }
+
+    .coffees{
+
     }
 }
 
@@ -177,7 +187,7 @@ nav a:hover{
       }
 
     .extra{
-        width: 900px;
+        width: 850px;
     }
 
     .coffees{
@@ -214,31 +224,5 @@ nav a:hover{
 
     .text{
         left: 10px;
-    }
-}
-
-@media screen  and (max-width:730px) /* Telas pequenas */ {
-    #IMG{
-        display: none;
-    }
-
-    .extra{
-        display: none;
-    }
-}
-
-@media screen  and (max-width:600px) /* Telas pequenas */ {
-
-    .body{
-        overflow: visible;
-    }
-
-    .text{
-        width: 50%;
-        top: 100px;
-    }
-
-    .center{
-        display: none;
     }
 }
