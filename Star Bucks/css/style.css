@@ -22,12 +22,12 @@ padding: 0 2%;
 .logo{
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 5px;
 }
 
 nav{
     position: absolute;
-    right: 5%;
+    right: 15%;
 }
 
 nav a{
@@ -66,7 +66,7 @@ nav a:hover{
 .midia{
     position:absolute;
     right: 15px;
-    top: 15px;
+    top: 100px;
     transition: 0.3s;
 }
 
@@ -143,9 +143,11 @@ nav a:hover{
     height: 130px;
 }
 
-@media screen and (max-height:515px) /* Remover coffees */ {
-    .coffees img{
-        display: none;
+/* Media apenas para alturas */
+
+@media screen and (max-height: 900px) {
+    body{
+        overflow: none;
     }
 }
 
@@ -155,14 +157,6 @@ nav a:hover{
       top: 220px;
     }
   }
-
-@media screen and (max-height: 670px) /* Para telas grandes */{
-    .extra{
-        right: -500px;
-        width: 850px;
-        height: 970px;
-    }
-}
 
 @media screen and (max-height: 600px) /* O minímo possível para telas grandes */{
 
@@ -176,53 +170,122 @@ nav a:hover{
     }
 
     .coffees{
-
+        right: 270px;
     }
 }
 
-@media screen and (max-width: 980px) /*Telas intermediárias*/{
+    @media screen and (max-height: 432px) {
+        
+        #IMG{
+            height: 350px;
+        }
 
-    .text {
-        top: 150px;
-      }
+        .extra{
+            top: 50px;
+        }
+}
+
+    @media screen and (max-height:515px) {
+        .coffees{
+            display: none;
+        }
+    }
+
+/* Media apenas para largura */
+
+@media screen and (max-width: 980px) /*Telas intermediárias*/{
 
     .extra{
         width: 850px;
     }
 
     .coffees{
-        position: absolute;
-        right: 430px;
-    }
-}
-
-@media screen and (max-width: 900px) /*Telas intermediárias*/{
-
-    .coffees{
-        position: absolute;
-        top: 560px;
-        right: 370px;
+        display: none;
     }
 }
 
 @media screen and (max-width: 900px) /*Telas itermediárias*/{
 
     .text{
-        top: 200px;
         font-size: 15px;
-    }
-
-
-    .coffees{
-        display: none;
     }
 }
 
 @media screen and (max-width: 790px) /*Telas itermediárias*/{
 
-
-
     .text{
         left: 10px;
+    }
+
+    .coffees{
+        right: 300px;
+    }
+}
+
+/* Altura e largura*/
+
+@media screen and (max-width:680px) and (max-height:1280px) {
+
+    #IMG{
+        left: 100px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:2000px) and (max-height:522px) {
+    
+    .coffees{
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width:620px) and (max-height: 1000px ) {
+
+
+    .logo{
+        top: 100px;
+        left:20px;
+    }
+
+    .midia{
+        position: fixed;
+        float: right;
+    }
+
+    nav{
+        display: block;
+        background-color: #017143;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        padding-left: 10px;
+        font-size: 93%;
+        text-align: left;
+        box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.171);
+    }
+
+    nav a{
+        color: white;
+        text-decoration: underline;
+    }
+
+    nav a:hover{
+        color: rgba(255, 255, 255, 0.733);
+    }
+
+
+    .extra{
+        display: none;
+    }
+
+    
+    .text{
+        position: relative;
+        margin: 0 auto;
+        font-size: 15px;
+        top: 300px;
     }
 }

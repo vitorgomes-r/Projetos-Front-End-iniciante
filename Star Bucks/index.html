@@ -12,11 +12,14 @@
         <div class="center">
         <div class="logo"><img src="assets/logo.png" alt="StarBucks logo">
         </div>
+            <div class="menu">
+                <img src="assets/menu.png" alt="menu" onclick="toggleMenu()" id="menu">
+            </div>
             <nav>
-                <a href="https://www.starbucks.com" target="_blank">Home</a>
-                <a href="https://www.starbucks.com/menu" target="_blank">Menu</a>
-                <a href="https://www.starbucks.com/gift" target="_blank">Gift Cards</a>
-                <a href="https://customerservice.starbucks.com/sbux" target="_blank">Contact us</a>
+                <a href="https://www.starbucks.com" target="_blank" >Home</a>
+                <a href="https://www.starbucks.com/menu" target="_blank" >Menu</a>
+                <a href="https://www.starbucks.com/gift" target="_blank" >Gift Cards</a>
+                <a href="https://customerservice.starbucks.com/sbux" target="_blank" >Contact us</a>
             </nav>
         </div>
     </header>
@@ -43,10 +46,15 @@
             <img src="assets/thumb3.png" alt="StarBucks Coffee 3" onmouseenter="STC3()">
         </div>
     </footer>
-</body>
-</html>
-<script>
+    <script>
+
+        //Variáveis
+
     const IMG = document.getElementById('IMG')
+    const menu = document.querySelector('nav')
+
+        //Trocar imagens
+
     const STC1 = ()=>{
         IMG.setAttribute('src',"assets/img1.png" )
     }
@@ -57,3 +65,6 @@
         IMG.setAttribute('src',"assets/img3.png" )
     }
 </script>
+
+</body>
+</html>
