@@ -1,3 +1,5 @@
+/* CSS príncipal */
+
 *{
 margin: 0;
 padding: 0;
@@ -151,7 +153,7 @@ nav a:hover{
     }
 }
 
-@media screen and (max-height: 750px) /* Para telas grandes */ {
+@media screen and (max-height: 750px){
     
     .text {
       top: 220px;
@@ -174,6 +176,14 @@ nav a:hover{
     }
 }
 
+    @media screen and (max-height:515px) {
+
+    .coffees{
+        display: none;
+    }
+}
+
+
     @media screen and (max-height: 432px) {
         
         #IMG{
@@ -184,16 +194,9 @@ nav a:hover{
             top: 50px;
         }
 }
-
-    @media screen and (max-height:515px) {
-        .coffees{
-            display: none;
-        }
-    }
-
 /* Media apenas para largura */
 
-@media screen and (max-width: 980px) /*Telas intermediárias*/{
+@media screen and (max-width: 980px){
 
     .extra{
         width: 850px;
@@ -204,14 +207,14 @@ nav a:hover{
     }
 }
 
-@media screen and (max-width: 900px) /*Telas itermediárias*/{
+@media screen and (max-width: 900px){
 
     .text{
         font-size: 15px;
     }
 }
 
-@media screen and (max-width: 790px) /*Telas itermediárias*/{
+@media screen and (max-width: 790px){
 
     .text{
         left: 10px;
@@ -224,6 +227,13 @@ nav a:hover{
 
 /* Altura e largura*/
 
+@media screen and (max-width:2000px) and (max-height:522px) {
+    
+    .coffees{
+        display: none;
+    }
+}
+
 @media screen and (max-width:680px) and (max-height:1280px) {
 
     #IMG{
@@ -232,14 +242,7 @@ nav a:hover{
     }
 }
 
-@media screen and (max-width:2000px) and (max-height:522px) {
-    
-    .coffees{
-        display: none;
-    }
-}
-
-/* Mobile */
+/* Mobile e telas extremamente pequenas */
 
 @media screen and (max-width:620px) and (max-height: 1000px ) {
 
@@ -250,19 +253,20 @@ nav a:hover{
     }
 
     .midia{
-        position: fixed;
+        position: static;
+        margin-top: 100px;
         float: right;
     }
 
     nav{
         display: block;
         background-color: #017143;
-        position: fixed;
+        position: absolute;
         left: 0px;
         top: 0px;
-        width: 100%;
+        width: 110%;
         padding-left: 10px;
-        font-size: 93%;
+        font-size: 12px;
         text-align: left;
         box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.171);
     }
@@ -283,8 +287,9 @@ nav a:hover{
 
     
     .text{
-        position: relative;
+        position: absolute;
         margin: 0 auto;
+        width: 340px;
         font-size: 15px;
         top: 300px;
     }
