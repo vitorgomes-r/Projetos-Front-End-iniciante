@@ -1,6 +1,6 @@
 # Projetos-Front-End-iniciante
 Alguns projetos meus de iniciantes apenas, coisas simples e códigos bem feitos.
 
-<a href="Projetos-Javascript-iniciantes\Página de login do GitHub\index.html">
-        <h2>Clone da página de login do GitHub</h2>
+<a href="//Star Bucks/index.html">
+       Projeto StarBucks
     </a>
